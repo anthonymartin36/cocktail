@@ -1,7 +1,6 @@
 import express from 'express'
 import * as Path from 'node:path'
-import functions from 'firebase-functions'
-
+import * as v2 from 'firebase-functions/v2'
 
 import cocktails from './routes/cocktails'
 //import fsPromises from 'node:fs/promises'
@@ -25,9 +24,8 @@ if (process.env.NODE_ENV === 'production') {
   server.get('*', (req, res) => {
     res.sendFile(Path.resolve('./dist/index.html'))
   })
-  
 }
 
-//exports.api = functions.https.onRequest(server)
+exports.api = v2.https.onRequest(server)
 
 export default server

@@ -2,15 +2,18 @@ import { Router } from 'express'
 
 import path from 'path'
 import fs from 'node:fs/promises'
-import { fileURLToPath } from 'url'
+//import { fileURLToPath } from 'url'
 import { Cocktail, Data } from '../../models/cocktails'
 
 const router = Router()
 
-const __filename = fileURLToPath(import.meta.url)
+// const subdir = path.join(__dirname, 'subdir')
+// const filePath = path.join(subdir, 'somefile.txt')
+
+//const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 let file = __dirname + '/../data/recipes.json'
-
+console.log("file : ", file)
 // http://localhost:3000/api/v1/cocktails
 router.get('/', async (req, res) => {
   // console.log('File source : ' + file)
