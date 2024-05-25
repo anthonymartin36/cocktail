@@ -1,7 +1,5 @@
 import express from 'express'
 import * as Path from 'node:path'
-import functions from 'firebase-functions'
-
 
 import cocktails from './routes/cocktails'
 //import fsPromises from 'node:fs/promises'
