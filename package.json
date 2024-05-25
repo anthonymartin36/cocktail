@@ -3,6 +3,7 @@
     "name": "cocktail",
     "version": "1.0.0",
     "description": "Boilerplate - cocktail",
+    "type": "module",
     "main": "server/index.ts",
     "engines": {
         "node": "20.13.1"
@@ -37,7 +38,6 @@
         "react-dom": "^18.2.0",
         "react-router-dom": "^6.23.1",
         "superagent": "^9.0.2",
-        "ts-node": "^10.9.2",
         "tsx": "^4.11.0"
     },
     "devDependencies": {
