@@ -9,9 +9,9 @@
         "node": "20.12.2"
     },
     "scripts": {
-        "start": "npm ci; npm run build;node ./build/index.ts;node server/index.ts",
-        "dev": "tsx watch server/index.ts",
-        "build": "esbuild --packages=external --platform=node --format=esm --outfile=dist/server.ts --bundle server/index.ts",
+        "start": "npm ci; npm run build;node ./build/index.js;node server/index.js",
+        "dev": "tsx watch server/index.js",
+        "build": "esbuild --packages=external --platform=node --format=esm --outfile=dist/server.js --bundle server/index.js",
         "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
         "test": "vitest"
     },

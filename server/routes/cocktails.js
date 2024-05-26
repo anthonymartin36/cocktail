@@ -3,7 +3,6 @@ import { Router } from 'express'
 import path from 'path'
 import fs from 'node:fs/promises'
 import { fileURLToPath } from 'url'
-import { Cocktail, Data } from '../../models/cocktails'
 
 const router = Router()
 
@@ -23,7 +22,7 @@ router.get('/:cId', async (req, res) => {
   
   const cId = Number(req.params.cId)
   const data = await awaitingReadFile(file)
-  let cocktail = data.cocktails.find( ( cocktail : Cocktail ) => cId == cocktail.id)
+  let cocktail = data.cocktails.find( ( cocktail  ) => cId == cocktail.id)
   try {
     res.json(cocktail)
   } catch (error) {
@@ -34,12 +33,12 @@ router.get('/:cId', async (req, res) => {
 
 
 
-  async function awaitingReadFile(file: string): Promise<Data> {
-    let data: Data = { cocktails: [] }
+  async function awaitingReadFile(file) {
+    let data
     try {
       let json = await fs.readFile(file, 'utf-8')
       data = JSON.parse(json)
-    } catch (err: any) {
+    } catch (err) {
       console.log('Error: ' + err.message)
     }
     return data
