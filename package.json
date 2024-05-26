@@ -9,7 +9,7 @@
         "node": "20.13.1"
     },
     "scripts": {
-        "start": "node server/index.ts",
+        "start": "npm ci; npm run build;node ./build/index.ts;node server/index.ts",
         "dev": "tsx watch server/index.ts",
         "build": "esbuild --packages=external --platform=node --format=esm --outfile=dist/server.ts --bundle server/index.ts",
         "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
@@ -51,6 +51,7 @@
         "@typescript-eslint/parser": "^7.2.0",
         "@vitejs/plugin-react": "^4.2.1",
         "esbuild": "0.21.3",
+        "esbuild-config": "^1.0.1",
         "eslint": "^8.57.0",
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-react-refresh": "^0.4.6",
