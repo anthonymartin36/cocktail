@@ -6,7 +6,7 @@
     "type": "module",
     "main": "server/index.ts",
     "engines": {
-        "node": "20.13.1"
+        "node": "20.12.2"
     },
     "scripts": {
         "start": "npm ci; npm run build;node ./build/index.ts;node server/index.ts",
@@ -33,7 +33,7 @@
         "express": "^4.19.2",
         "firebase-admin": "^12.1.1",
         "firebase-functions": "^5.0.1",
-        "node": "20.13.1",
+        "node": "20.12.2",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-router-dom": "^6.23.1",
