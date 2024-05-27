@@ -1,7 +1,7 @@
 import express from 'express'
 import * as Path from 'node:path'
 
-import cocktails from './routes/cocktails'
+import cocktails from './routes/cocktails.js'
 //import fsPromises from 'node:fs/promises'
 
 import * as dotenv from 'dotenv'
