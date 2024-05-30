@@ -1,12 +1,13 @@
 import express from 'express'
+import cors from 'cors'
 import * as Path from 'node:path'
 
 import cocktails from './routes/cocktails.js'
-//import fsPromises from 'node:fs/promises'
-
 import * as dotenv from 'dotenv'
 
 const server = express()
+server.use(cors({methods:["get","post","put","delete"],origin:'*'}))
+
 dotenv.config()
 server.use(express.json())
 
